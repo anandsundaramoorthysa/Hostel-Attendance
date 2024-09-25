@@ -51,7 +51,7 @@ The project uses the following Flutter dependencies:
    ```
 
 2. **Create a new Flutter project:**
-   Since the repository contains only the `lib` folder and the `pubspec.yaml` file, you’ll need to create a new Flutter project first.
+   Since the repository contains only the `lib` folder, `pubspec.yaml`, and `assets` folder, you’ll need to create a new Flutter project first.
    ```bash
    flutter create lohos
    cd lohos
@@ -64,26 +64,32 @@ The project uses the following Flutter dependencies:
    cp -r path-to-repo/lib ./lib
    ```
 
-4. **Update the `pubspec.yaml` file:**
+4. **Add the `assets` folder:**
+   Add the `assets` folder from the repository to your project by copying it to the root directory of the project.
+   ```bash
+   cp -r path-to-repo/assets ./assets
+   ```
+
+5. **Update the `pubspec.yaml` file:**
    Replace the generated `pubspec.yaml` file with the one from the repository:
    ```bash
    rm pubspec.yaml
    cp path-to-repo/pubspec.yaml ./pubspec.yaml
    ```
 
-5. **Install the dependencies:**
+6. **Install the dependencies:**
    Run the following command to install all the necessary dependencies as specified in the `pubspec.yaml` file:
    ```bash
    flutter pub get
    ```
 
-6. **Run the app:**
+7. **Run the app:**
    Once the setup is complete, you can run the app:
    ```bash
    flutter run
    ```
 
-7. **Customize the app icon (optional):**
+8. **Customize the app icon (optional):**
    You can customize the app icon by adding your desired icon image at `assets/icon/icon.png`. Then, run the following command to generate the new app icon:
    ```bash
    flutter pub run flutter_launcher_icons:main
