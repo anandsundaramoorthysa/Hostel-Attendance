@@ -43,58 +43,57 @@ The project uses the following Flutter dependencies:
 
 ## Getting Started
 
-1. **Clone the repository:**
-   If you haven’t already, clone the repository to your local machine and navigate into it.
+1. **Clone the repository:** If you haven’t already, clone the repository to your local machine and navigate into it.
    ```bash
    git clone https://github.com/your-repo/lohos.git
    cd lohos
    ```
 
-2. **Create a new Flutter project:**
-   Since the repository contains only the `lib` folder, `pubspec.yaml`, and `assets` folder, you’ll need to create a new Flutter project first.
+2. **Create a new Flutter project:** Since the repository contains only the `lib` folder, `pubspec.yaml`, and `assets` folder, you’ll need to create a new Flutter project first.
    ```bash
    flutter create lohos
    cd lohos
    ```
 
-3. **Replace the `lib` folder:**
-   After creating the project, replace the newly generated `lib` folder with the `lib` folder from the repository.
+3. **Replace the lib folder:** After creating the project, replace the newly generated `lib` folder with the `lib` folder from the repository.
    ```bash
    rm -rf lib
    cp -r path-to-repo/lib ./lib
    ```
 
-4. **Add the `assets` folder:**
-   Add the `assets` folder from the repository to your project by copying it to the root directory of the project.
+4. **Add the assets folder:** Add the `assets` folder from the repository to your project by copying it to the root directory of the project.
    ```bash
    cp -r path-to-repo/assets ./assets
    ```
 
-5. **Update the `pubspec.yaml` file:**
-   Replace the generated `pubspec.yaml` file with the one from the repository:
+5. **Update the pubspec.yaml file:** Replace the generated `pubspec.yaml` file with the one from the repository:
    ```bash
    rm pubspec.yaml
    cp path-to-repo/pubspec.yaml ./pubspec.yaml
    ```
 
-6. **Install the dependencies:**
-   Run the following command to install all the necessary dependencies as specified in the `pubspec.yaml` file:
+6. **Update file permissions for Android:**  
+   Open your Flutter project in your code editor and locate the `AndroidManifest.xml` file at `android/app/src/main/AndroidManifest.xml`. Add the following lines to request permission for reading and writing external storage, right before the `<application>` tag:
+   ```xml
+   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+   ```
+
+7. **Install the dependencies:** Run the following command to install all the necessary dependencies as specified in the `pubspec.yaml` file:
    ```bash
    flutter pub get
    ```
 
-7. **Run the app:**
-   Once the setup is complete, you can run the app:
+8. **Run the app:** Once the setup is complete, you can run the app:
    ```bash
    flutter run
    ```
 
-8. **Customize the app icon (optional):**
-   You can customize the app icon by adding your desired icon image at `assets/icon/icon.png`. Then, run the following command to generate the new app icon:
+9. **Customize the app icon (optional):** You can customize the app icon by adding your desired icon image at `assets/icon/icon.png`. Then, run the following command to generate the new app icon:
    ```bash
    flutter pub run flutter_launcher_icons:main
    ```
-
+   
 ## Contact Us
 
 For any inquiries or if you need further assistance, please contact me at:
