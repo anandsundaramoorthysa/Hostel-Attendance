@@ -43,23 +43,51 @@ The project uses the following Flutter dependencies:
 
 ## Getting Started
 
-1. Clone the repository:
+1. **Clone the repository:**
+   If you haven’t already, clone the repository to your local machine and navigate into it.
    ```bash
    git clone https://github.com/your-repo/lohos.git
    cd lohos
    ```
 
-2. Install the dependencies:
+2. **Create a new Flutter project:**
+   Since the repository contains only the `lib` folder and the `pubspec.yaml` file, you’ll need to create a new Flutter project first.
+   ```bash
+   flutter create lohos
+   cd lohos
+   ```
+
+3. **Replace the `lib` folder:**
+   After creating the project, replace the newly generated `lib` folder with the `lib` folder from the repository.
+   ```bash
+   rm -rf lib
+   cp -r path-to-repo/lib ./lib
+   ```
+
+4. **Update the `pubspec.yaml` file:**
+   Replace the generated `pubspec.yaml` file with the one from the repository:
+   ```bash
+   rm pubspec.yaml
+   cp path-to-repo/pubspec.yaml ./pubspec.yaml
+   ```
+
+5. **Install the dependencies:**
+   Run the following command to install all the necessary dependencies as specified in the `pubspec.yaml` file:
    ```bash
    flutter pub get
    ```
 
-3. Run the app:
+6. **Run the app:**
+   Once the setup is complete, you can run the app:
    ```bash
    flutter run
    ```
 
-4. Customize the app icon by adding your desired icon image at `assets/icon/icon.png` and updating the `flutter_launcher_icons` configuration.
+7. **Customize the app icon (optional):**
+   You can customize the app icon by adding your desired icon image at `assets/icon/icon.png`. Then, run the following command to generate the new app icon:
+   ```bash
+   flutter pub run flutter_launcher_icons:main
+   ```
 
 ## Contact Us
 
