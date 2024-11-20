@@ -1,6 +1,6 @@
 # Lohos - Flutter Project
 
-A new Flutter project called **Lohos**, designed to manage student information and integrate CSV handling with features like image picking, file management, and more.
+A Flutter project called **Lohos**, designed to manage student information and integrate CSV handling with features like image picking, file management, and more.
 
 ## About
 
